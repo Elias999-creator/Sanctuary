@@ -4,16 +4,34 @@ using UnityEngine;
 
 public class CharController_Motor : MonoBehaviour {
 
-	public float speed = 10.0f;
+	private float speed = 10.0f;
+	public float walkSpeed;
+	public float sprintSpeed;
+	public float crouchSpeed;
+	public float crouchYScale;
+	private float startYscale;
 	public float sensitivity = 30.0f;
 	public float WaterHeight = 15.5f;
 	CharacterController character;
 	public GameObject cam;
+	public KeyCode sprintKey = KeyCode.LeftShift;
+	public KeyCode crouchKey = KeyCode.C;
 	float moveFB, moveLR;
 	float rotX, rotY;
 	public bool webGLRightClickRotation = true;
 	float gravity = -9.8f;
 
+	public MovementState state;
+
+	Rigidbody rb;
+
+	public enum MovementState
+    {
+		walking,
+		sprinting,
+		crouching,
+		air
+    }
 
 	void Start(){
 		//LockCursor ();
@@ -22,8 +40,46 @@ public class CharController_Motor : MonoBehaviour {
 			webGLRightClickRotation = false;
 			sensitivity = sensitivity * 1.5f;
 		}
+
+		startYscale = transform.localScale.y;
 	}
 
+	private void MyInput()
+    {
+		if(Input.GetKeyDown(crouchKey))
+        {
+			transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+			rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        }
+
+		if(Input.GetKeyUp(crouchKey))
+        {
+			transform.localScale = new Vector3(transform.localScale.x, startYscale, transform.localScale.z);
+		}
+    }
+
+	private void StateHandler()
+    {
+		if(Input.GetKey(crouchKey))
+        {
+			state = MovementState.crouching;
+			speed = crouchSpeed;
+        }
+
+		if(Input.GetKey(sprintKey))
+        {
+			state = MovementState.sprinting;
+			speed = sprintSpeed;
+        }
+
+		else
+        {
+			state = MovementState.walking;
+			speed = walkSpeed;
+        }
+
+
+    }
 
 	void CheckForWaterHeight(){
 		if (transform.position.y < WaterHeight) {
@@ -45,7 +101,9 @@ public class CharController_Motor : MonoBehaviour {
 		//rotX = Input.GetKey (KeyCode.Joystick1Button4);
 		//rotY = Input.GetKey (KeyCode.Joystick1Button5);
 
+		MyInput();
 		CheckForWaterHeight ();
+		StateHandler();
 
 
 		Vector3 movement = new Vector3 (moveFB, gravity, moveLR);
