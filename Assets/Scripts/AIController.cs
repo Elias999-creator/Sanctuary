@@ -31,6 +31,7 @@ public class AIController : MonoBehaviour
     bool m_PlayerNear;
     bool m_IsPatrol;
     bool m_CaughtPlayer;
+    Animator animator;
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class AIController : MonoBehaviour
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speedWalk;
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -62,6 +64,11 @@ public class AIController : MonoBehaviour
         {
             Patroling();
         }
+
+        if (navMeshAgent.remainingDistance > 2)
+            animator.SetBool("isMoving", true);
+        else
+            animator.SetBool("isMoving", false);
     }
 
     private void Chasing()
