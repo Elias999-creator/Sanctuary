@@ -235,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4731992596031093373}
   - component: {fileID: -1779475374652680394}
+  - component: {fileID: 5253731918618113891}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -290,6 +291,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33.34619, y: 50.222443}
   m_EdgeRadius: 0
+--- !u!114 &5253731918618113891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4731992596031093372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01068407d317b436fbcbb9a6acb49844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  up: {fileID: 4731992595778388665}
+  on: {fileID: 4731992596219148665}
+  isOn: 0
+  isUp: 0
 --- !u!1 &4731992596174958154
 GameObject:
   m_ObjectHideFlags: 0
