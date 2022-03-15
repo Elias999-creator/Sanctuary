@@ -772,6 +772,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: isOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: isUp
       value: 1
       objectReference: {fileID: 0}
