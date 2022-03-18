@@ -1677,6 +1677,8 @@ GameObject:
   - component: {fileID: 634534291}
   - component: {fileID: 634534290}
   - component: {fileID: 1979580545}
+  - component: {fileID: 1813823276}
+  - component: {fileID: 1813823277}
   m_Layer: 0
   m_Name: Zombie1
   m_TagString: Untagged
@@ -1794,6 +1796,34 @@ MonoBehaviour:
   walkPointRange: 3
   sightRange: 20
   playerInSightRange: 0
+--- !u!114 &1813823276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2571979dc992c4522ab57e08bb962d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scream: {fileID: 0}
+  JumpCam: {fileID: 0}
+  flashImg: {fileID: 0}
+--- !u!65 &1813823277
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1052809, y: 2.9049287, z: 1}
+  m_Center: {x: 0.05264053, y: 0.95246464, z: 0}
 --- !u!1 &4710940672626480558
 GameObject:
   m_ObjectHideFlags: 0
