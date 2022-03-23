@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-    public GameObject up;
-    public GameObject on;
-    public bool isOn;
-    public bool isUp;
+    static public Main Instance;
+
+    public GameObject down;
+    public GameObject off;
+    public bool isOff;
+    public bool isDown;
 
     // Start is called before the first frame update
     void Start()
     {
-        on.SetActive(isOn);
-        up.SetActive(isUp);
-        if (isOn)
+        down.SetActive(isOff);
+        off.SetActive(isDown);
+        if (isOff)
         {
             Main.Instance.SwitchChange(1);
         }
@@ -22,18 +24,23 @@ public class Switch : MonoBehaviour
 
     private void OnMouseUp()
     {
-        isUp = !isUp;
-        isOn = !isOn;
-        on.SetActive(isOn);
-        up.SetActive(isUp);
+        if (Input.GetButtonDown("Click"))
+        {
+            Debug.Log("Click");
 
-        if (isOn)
-        {
-            Main.Instance.SwitchChange(1);
-        }
-        else
-        {
-            Main.Instance.SwitchChange(-1);
+            isDown = !isDown;
+            isOff = !isOff;
+            off.SetActive(isOff);
+            down.SetActive(isDown);
+
+            if (isOff)
+            {
+                Main.Instance.SwitchChange(1);
+            }
+            else
+            {
+                Main.Instance.SwitchChange(-1);
+            }
         }
     }
 }

@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 4731992595778388660}
   - component: {fileID: 4731992595778388663}
   m_Layer: 0
-  m_Name: up
+  m_Name: off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,10 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01068407d317b436fbcbb9a6acb49844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: {fileID: 4731992595778388665}
-  on: {fileID: 4731992596219148665}
-  isOn: 0
-  isUp: 0
+  down: {fileID: 4731992594647140703}
+  off: {fileID: 4731992594327900297}
+  isOff: 0
+  isDown: 0
 --- !u!1 &4731992596174958154
 GameObject:
   m_ObjectHideFlags: 0
