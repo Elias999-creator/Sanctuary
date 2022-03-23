@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
     static public Main Instance;
+
+    public int sceneToLoad;
 
     public int switchCount;
     public GameObject winText;
@@ -21,6 +24,7 @@ public class Main : MonoBehaviour
         if(onCount == switchCount)
         {
             winText.SetActive(true);
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }

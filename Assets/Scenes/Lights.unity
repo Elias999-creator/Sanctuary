@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84d9a03f900240ebad10f9159f924e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: 0
   switchCount: 5
   winText: {fileID: 988183491}
 --- !u!1 &698744095
@@ -812,6 +813,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: isOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: isDown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: OnCustomClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1019,6 +1028,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: isOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: isOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: isDown
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

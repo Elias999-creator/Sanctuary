@@ -27,9 +27,6 @@ public class Switch : MonoBehaviour
 
     public void Switchlight()
     {
-
-        Debug.Log("Click");
-
         isDown = !isDown;
         isOff = !isOff;
         off.SetActive(isOff);
