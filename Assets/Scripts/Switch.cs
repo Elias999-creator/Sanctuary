@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Switch : MonoBehaviour
 {
@@ -22,25 +25,24 @@ public class Switch : MonoBehaviour
         }
     }
 
-    private void OnMouseUp()
+    public void Switchlight()
     {
-        if (Input.GetButtonDown("Click"))
+
+        Debug.Log("Click");
+
+        isDown = !isDown;
+        isOff = !isOff;
+        off.SetActive(isOff);
+        down.SetActive(isDown);
+
+        if (isOff)
         {
-            Debug.Log("Click");
-
-            isDown = !isDown;
-            isOff = !isOff;
-            off.SetActive(isOff);
-            down.SetActive(isDown);
-
-            if (isOff)
-            {
-                Main.Instance.SwitchChange(1);
-            }
-            else
-            {
-                Main.Instance.SwitchChange(-1);
-            }
+            Main.Instance.SwitchChange(1);
+        }
+        else
+        {
+            Main.Instance.SwitchChange(-1);
         }
     }
 }
+   

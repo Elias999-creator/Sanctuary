@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 410069173}
     m_Modifications:
+    - target: {fileID: -1779475374652680394, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4731992596031093372, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: m_Name
       value: Switch (4)
@@ -589,6 +593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 410069173}
     m_Modifications:
+    - target: {fileID: -1779475374652680394, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4731992596031093372, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: m_Name
       value: Switch (2)
@@ -703,6 +711,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 410069173}
     m_Modifications:
+    - target: {fileID: -1779475374652680394, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4731992596031093372, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: m_Name
       value: Switch (1)
@@ -798,6 +810,18 @@ PrefabInstance:
     - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: isUp
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: OnCustomClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: OnCustomClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: OnCustomClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12263b00e2284998a4ede5853b72877, type: 3}
@@ -901,6 +925,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 410069173}
     m_Modifications:
+    - target: {fileID: -1779475374652680394, guid: b12263b00e2284998a4ede5853b72877, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4731992596031093372, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: m_Name
       value: Switch (3)
@@ -1187,14 +1215,6 @@ PrefabInstance:
     - target: {fileID: 4731992596031093373, guid: b12263b00e2284998a4ede5853b72877, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
-      propertyPath: isOff
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253731918618113891, guid: b12263b00e2284998a4ede5853b72877, type: 3}
-      propertyPath: isDown
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12263b00e2284998a4ede5853b72877, type: 3}
