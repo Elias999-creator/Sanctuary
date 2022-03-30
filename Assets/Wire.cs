@@ -5,11 +5,14 @@ using UnityEngine;
 public class Wire : MonoBehaviour
 {
     public SpriteRenderer wireEnd;
+    public GameObject lightOn;
     Vector3 startPoint;
+    Vector3 startPosition;
     // Start is called before the first frame update
     void Start()
     {
         startPoint = transform.parent.position;
+        startPosition = transform.position;
     }
 
     private void OnMouseDrag()
@@ -17,6 +20,41 @@ public class Wire : MonoBehaviour
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         newPosition.z = 0;
 
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(newPosition, .2f);
+        foreach (Collider2D collider in colliders)
+        {
+            if(collider.gameObject != gameObject)
+            {
+                UpdateWire(collider.transform.position);
+                return;
+
+                if (transform.parent.name.Equals(collider.transform.parent.name))
+                {
+                    Main.Instance.SwitchChange(1);
+
+                    collider.GetComponent<Wire>()?.Done();
+                    Done();
+                }
+            }
+        }
+
+        UpdateWire(newPosition);
+    }
+
+    void Done()
+    {
+        lightOn.SetActive(true);
+
+        Destroy(this);
+    }
+
+    private void OnMouseUp()
+    {
+        UpdateWire(startPosition);
+    }
+
+    void UpdateWire(Vector3 newPosition)
+    {
         transform.position = newPosition;
 
         Vector3 direction = newPosition - startPoint;

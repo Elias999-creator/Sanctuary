@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 0
-  switchCount: 5
+  switchCount: 4
   winText: {fileID: 1377718527}
 --- !u!114 &513764968
 MonoBehaviour:
