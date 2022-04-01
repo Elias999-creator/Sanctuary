@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharController_Motor : MonoBehaviour
 {
+	public static CharController_Motor instance;
 
 	private float speed = 10.0f;
 	public float walkSpeed;
@@ -32,6 +34,11 @@ public class CharController_Motor : MonoBehaviour
 		sprinting,
 		crouching,
 		air
+	}
+
+	void Awake()
+	{
+		instance = this;
 	}
 
 	void Start()
@@ -141,7 +148,9 @@ public class CharController_Motor : MonoBehaviour
 		cam.transform.Rotate(-rotY * Time.deltaTime, 0, 0);
 	}
 
-
-
+	public void KillPlayer()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
 
 }
