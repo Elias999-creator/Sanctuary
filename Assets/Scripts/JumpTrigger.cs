@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JumpTrigger : MonoBehaviour
 {
@@ -18,8 +19,7 @@ public class JumpTrigger : MonoBehaviour
 
     IEnumerator EndJump()
     {
-        yield return new WaitForSeconds(2.03f);
-        JumpCam.SetActive(true);
-        flashImg.SetActive(false);
+        yield return new WaitForSecondsRealtime(5);
+        SceneManager.LoadScene(0);
     }
 }
