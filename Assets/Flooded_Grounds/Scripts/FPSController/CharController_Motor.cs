@@ -14,7 +14,6 @@ public class CharController_Motor : MonoBehaviour
 	public float crouchYScale;
 	private float startYscale;
 	public float sensitivity = 30.0f;
-	public float WaterHeight = 15.5f;
 	CharacterController character;
 	public GameObject cam;
 	public KeyCode sprintKey = KeyCode.LeftShift;
@@ -91,19 +90,6 @@ public class CharController_Motor : MonoBehaviour
 
 	}
 
-	void CheckForWaterHeight()
-	{
-		if (transform.position.y < WaterHeight)
-		{
-			gravity = 0f;
-		}
-		else
-		{
-			gravity = -9.8f;
-		}
-	}
-
-
 
 	void Update()
 	{
@@ -117,7 +103,6 @@ public class CharController_Motor : MonoBehaviour
 		//rotY = Input.GetKey (KeyCode.Joystick1Button5);
 
 		MyInput();
-		CheckForWaterHeight();
 		StateHandler();
 
 
