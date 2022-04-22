@@ -11,7 +11,7 @@ public class Main : MonoBehaviour
 
     public int switchCount;
     public GameObject winText;
-    private int onCount = 0;
+    private int onCount = 5;
 
     private void Awake()
     {
