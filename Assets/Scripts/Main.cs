@@ -24,7 +24,8 @@ public class Main : MonoBehaviour
         if(onCount == switchCount)
         {
             winText.SetActive(true);
-            SceneManager.LoadScene(sceneToLoad);
+
+            Destroy(gameObject);
         }
     }
 }
