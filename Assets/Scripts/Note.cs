@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Note : MonoBehaviour
 {
-    public Image _noteImage;
+    public GameObject _noteImage;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            _noteImage.enabled = true;
+            _noteImage.active = true;
         }
     }
 
@@ -19,7 +19,7 @@ public class Note : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _noteImage.enabled = false;
+            _noteImage.active = false;
         }
     }
 }
