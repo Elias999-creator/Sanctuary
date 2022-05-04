@@ -9,12 +9,15 @@ public class JumpTrigger : MonoBehaviour
     public GameObject JumpCam;
     public GameObject flashImg;
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        Scream.Play();
-        JumpCam.SetActive(true);
-        flashImg.SetActive(true);
-        StartCoroutine(EndJump());
+        if(other.CompareTag("Player"))
+        {
+            Scream.Play();
+            JumpCam.SetActive(true);
+            flashImg.SetActive(true);
+            StartCoroutine(EndJump());
+        }
     }
 
     IEnumerator EndJump()
