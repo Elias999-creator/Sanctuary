@@ -198,7 +198,9 @@ GameObject:
   - component: {fileID: 9500310}
   - component: {fileID: 6430953335718760960}
   - component: {fileID: -6225702632752458027}
+  - component: {fileID: 1063434796}
   - component: {fileID: 1063434791}
+  - component: {fileID: 1063434793}
   m_Layer: 0
   m_Name: thc6
   m_TagString: Untagged
@@ -279,6 +281,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1063434796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1063434791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,21 +303,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 111292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa4f23d93d4a1a0489aa22f32fc69a20, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e9f9ef6945f19443933b7758537399f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: -6225702632752458027}
+  enemy: {fileID: -6225702632752458027}
   player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 1
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 3
-  sightRange: 20
-  playerInSightRange: 0
+--- !u!114 &1063434793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2571979dc992c4522ab57e08bb962d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scream: {fileID: 0}
+  JumpCam: {fileID: 0}
+  flashImg: {fileID: 0}
 --- !u!1 &112038
 GameObject:
   m_ObjectHideFlags: 0
