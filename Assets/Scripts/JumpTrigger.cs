@@ -23,6 +23,6 @@ public class JumpTrigger : MonoBehaviour
     IEnumerator EndJump()
     {
         yield return new WaitForSecondsRealtime(2);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
