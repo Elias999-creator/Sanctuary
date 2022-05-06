@@ -22,6 +22,7 @@ public class CharController_Motor : MonoBehaviour
 	float rotX, rotY;
 	public bool webGLRightClickRotation = true;
 	float gravity = -9.8f;
+	public int sceneToLoad;
 
 	public MovementState state;
 
@@ -135,7 +136,7 @@ public class CharController_Motor : MonoBehaviour
 
 	public void KillPlayer()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene(2);
 	}
 
 }
