@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Sky_MediumCloudy
   m_Shader: {fileID: 4800000, guid: 0e7ea34a1cf24cb4e88994deec799169, type: 3}
   m_ShaderKeywords: _SUNDISK_HIGH_QUALITY
@@ -65,7 +66,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Exposure: 1
+    - _Exposure: 0.8
     - _FogColorMix: 0.6
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -89,3 +90,4 @@ Material:
     - _GroundColor: {r: 0.36899996, g: 0.34899998, b: 0.34099993, a: 1}
     - _SkyTint: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 0.5}
+  m_BuildTextureStacks: []
